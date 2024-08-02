@@ -1,0 +1,37 @@
+{% extends './../_shared/layout.twig' %}
+
+{% set page_title = 'Home' %}
+
+{% block main %}
+
+<home-controller>
+  <div class="h-full flex justify-center items-center px-4 pb-24 overflow-hidden">
+      <div class="flex flex-col gap-8">
+          <div data-target="home-controller.titleElem" class="text-7xl text-center px-8">
+              {{ home.title }}
+          </div>
+          <div data-target="home-controller.subtitleElem" class="text-xl text-center px-4">
+              {{ home.subtitle }}
+          </div>
+          <div class="flex justify-center flex-col md:flex-row gap-5 md:gap-20 text-center">
+              <div data-target="home-controller.bioLink">
+                  <a href="/bio.html" data-target="home-controller.bioLink">
+                      Bio
+                  </a>
+              </div>
+              <div data-target="home-controller.resumeLink">
+                  <a href="/resume.html" data-target="home-controller.resumeLink">
+                      Résumé
+                  </a>
+              </div>
+              <div data-target="home-controller.contactLink">
+                  <a href="/contact.html" data-target="home-controller.contactLink">
+                      Contact
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</home-controller>
+
+{% endblock %}

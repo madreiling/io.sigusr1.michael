@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.turbo-progress-bar {
+    @apply bg-io-primary;
+}
+
+@layer base {
+    a, button {
+        @apply transition ease-in-out text-io-primary hover:text-io-highlight duration-500;
+    }
+}

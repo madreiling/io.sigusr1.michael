@@ -1,0 +1,204 @@
+{
+    //
+    // Data entered here will be available to the twig templates during builds
+    // (e.g. doing {{ home.title }} in a twig template will be replaced with "Michael Dreiling" as defined below)
+    //
+
+    "application_name": "Michael Dreiling",
+    "application_description": "Personal website for Michael Dreiling, Senior Software Engineer for the Cleveland Cavaliers.",
+    "google_analytics_key": "G-W3E9ETH25J",
+    "google_site_verification_code": "wIQ5tCM6cAuIJdewFRkVjiXGDf5Zxr6H2lvIsVU45RA",
+    "home": {
+        "title": "Michael Dreiling",
+        "subtitle": "Senior Software Engineer, Basketball Systems for the Cleveland&nbsp;Cavaliers."
+    },
+    "bio": {
+        "sections": [
+            {
+                "heading": "Hi, I'm Michael.",
+                "paragraphs": [
+                    "My passion is building incredible software.",
+                    "Throughout my career I’ve come to recognize programming for what it can be—a craft. Akin to carpentry, landscaping, literature, and the like. Not art, but functional art requiring a balance of aesthetics, pragmatism, and effectiveness. Code has purpose, and although it is abstract and hidden away from view, a good craftsmen cultivates quality such that it is inherently apparent. You can “feel” quality when it's there, and that unconscious sense is what I strive for in my work. There is no substitute for attention to detail.",
+                    "I believe creating quality code doesn’t come from being an expert in the latest fads, but from a solid foundation of principles alongside practice, experience, and never-ending passion. In my <a href='/resume.html'>résumé</a> you’ll find both incredible breadth and depth in the type of projects I’ve worked on and the technologies that I’ve used. I don’t shy away from something new or foreign, and from that, have become quite proficient at a large number of the main stream technologies in modern software engineering (including the latest fads), covering frontend, backend, and mobile. It is in this sense that I consider myself a true full-stack engineer. I can do it all and I do it well, either from scratch or from within an existing codebase.",
+                ],
+            },
+            {
+                "heading": "This site.",
+                "paragraphs": [
+                    "I initially wrote and designed this site using React over the course of a few low-key weekends in June 2017. In June 2024, after 7 years of an ever-changing front-end landscape, I rewrote this site again using only modern HTML, CSS, and Javascript. The virtual DOM has outlived its usefulness.",
+                    "The overwhelming majority of my work can't be shared to the public, so I made <a target='_blank' href='https://github.com/madreiling/io.sigusr1.michael'>this website's code public</a> as a small optimistic introduction into my experimentation with creating statically generated multi-page-apps using just webpack."
+                ]
+            }
+        ]
+    },
+    "resume": {
+        "pdf": "../_assets/MichaelDreilingResume.pdf",
+        "education": [
+            {
+                "school": "University of Kansas",
+                "degree": "Bachelor of Science in Computer Science",
+                "start_year": "2006",
+                "end_year": "2011",
+                "description": "The computer science program at KU is a degree from the School of Engineering's department of Electrical Engineering and Computer Science (similar to MIT). It was heavily focused on the theory of computing. The majority of the program was taught in C++, along with a decent amount of Java, Scheme, Haskell, and Python sprinkled in.",
+                "links": [
+                    {
+                        "href": "../_assets/KU_CS_Curriculum.pdf",
+                        "text": "View Cirriculum"
+                    }
+                ]
+            }
+        ],
+        "skills": {
+            "intro": "I've spent enough time with everything listed here that, if thrown into a random codebase, I'd be adequately proficient. They are listed in no particular order.",
+            "programming_languages": [
+                "Rust",
+                "C++ / C",
+                "Python",
+                "Javascript / Typescript",
+                "HTML5 / CSS3 / Sass / Less",
+                "Java / Kotlin / Android",
+                "Objective-C / Swift / iOS",
+                "PHP",
+                "Scheme / Lisp",
+                "C# / WPF / UWP / .NET Core"
+            ],
+            "frameworks": [
+                {
+                    "category": "API / CMS",
+                    "text": "Flask, Django, FastApi, .Net Core, Rocket.rs, Laravel, Play!, Symfony, ezPublish, WordPress, Drupal",
+                },
+                {
+                    "category" : "Databases",
+                    "text": "MySQL, SQL Server, Postgres, SQLlite, MongoDB, ElasticSearch, SingleStore",
+                },
+                {
+                    "category" : "Javascript",
+                    "text": "React, Vue, Svelte, Angular, D3, GSAP, Leaflet, Lit / Web Components",
+                },
+                {
+                    "category" : "CSS",
+                    "text": "Tailwind, Bootstrap, Shoelace, Foundation",
+                },
+                {
+                    "category" : "OpenGL",
+                    "text": "OpenFrameworks, Cinder, ThreeJS, PixiJS",
+                },
+                {
+                    "category" : "Mobile",
+                    "text": "Android Development, iOS Development, Progressive Web Apps (PWAs)",
+                },
+                {
+                    "category" : "Cloud",
+                    "text": "Amazon Web Services, Azure, VMware vSphere, Digital Ocean",
+                },
+                {
+                    "category" : "Web Servers",
+                    "text": "Nginx, Apache, IIS",
+                },
+                {
+                    "category" : "AI",
+                    "text": "Supervised Learning, Unsupervised Learning, GenAI+Vector Stores",
+                },
+                {
+                    "category" : "Other",
+                    "text": "Kubernetes, Docker, Vuforia, Meridian, Mapbox, Carto, ExtendScript",
+                }
+            ],
+            "outro" :"Continuing the lists, I'm equally at home on OSX, Windows, and Linux; would find it hard to live without git, the shell, or WSL/Cygwin; have practical knowledge and background in algorithms, mathematics, compilers, interpreters, machine learning, asynchronous programming, vertex/fragment shading, (linux) system administration, and computer networking; and am skilled enough for simple design work in Photoshop, Illustrator, After Effects, Figma, and Adobe XD.",
+        },
+        "experience": [
+            {
+                "company": "Cleveland Cavaliers",
+                "start_date": "December 2020",
+                "end_date": "Present",
+                "location": "Cleveland, Ohio",
+                "description": "The Cleveland Cavaliers are one of thirty professional NBA franchises. As part of the front-office's analytics team, I create, refine, and innovate internal tooling for player and team analytics used by the coaching, scouting, and basketball operations leadership.",
+                "links": []
+            },
+            {
+                "company": "The Cleveland Museum of Art",
+                "start_date": "August 2017",
+                "end_date": "May 2020",
+                "location": "Cleveland, Ohio",
+                "description": "The Cleveland Museum of Art is the only major art institution in the nation with an entire gallery dedicated to discovering the museum’s collection through digital technology (Artlens Gallery). As the lead software engineer, I was a part of a small team dedicated to refining and perfecting those digital interactives, along with improving the museum’s various websites, apps, custom internal software tools, and custom temporary exhibition interactives.",
+                "links": [
+                    {
+                        "href": "https://www.youtube.com/watch?v=XYRjaZl08lQ",
+                        "text": "Artlens Gallery"
+                    }
+                ]
+            },
+            {
+                "company": "Local Projects",
+                "start_date": "June 2015",
+                "end_date": "June 2017",
+                "location": "New York, NY",
+                "description": "Local Projects is an award winning experience design studio located in lower Manhattan. As a creative engineer my role included a significant amount of backend and mobile development (both Android and iOS), alongside a fair amount of frontend. Clients included the American Museum of Natural History, the Museum of the City of New York, the Cleveland Museum of Art, Brookfield Place, Chipotle, IBM, and the Fashion for Good Initiative.",
+                "links": [
+                    {
+                        "href": "https://vimeo.com/192181904",
+                        "text": "New York at Its Core, MNCY"
+                    },
+                    {
+                        "href": "https://vimeo.com/200893469",
+                        "text": "Explorer, AMNH"
+                    },
+                    {
+                        "href": "https://vimeo.com/144146816",
+                        "text": "Brookfield Place"
+                    },
+                ]
+            },
+            {
+                "company": "U.S. District Court, Distrct of Kansas",
+                "start_date": "July 2011",
+                "end_date": "May 2015",
+                "location": "Kansas City, KS",
+                "description": "The District of Kansas is one of 94 federal judicial districts in the United States. It encompasses the entire state. As the sole software engineer, I created several applications that helped streamline the work of the court–making its opinions more accessible to the public and its employees more efficient–and maintained and extended many of its existing applications. A few of the applications/approaches had national impact.",
+                "links": []
+            },
+            {
+                "company": "ITTC, University of Kansas",
+                "start_date": "January 2010",
+                "end_date": "December 2010",
+                "location": "Lawrence, KS",
+                "description": "The Information and Telecommunication Technology Center (ITTC) is the preeminent scientific research center at the University of Kansas. As an undergraduate researcher under the direction of professor Doug Niehaus, I worked on creating a competitive alternative to Westlaw and Lexis/Nexis. Work included automatic parsing and interpreting of legal case citations, custom Google-like ranking of legal cases, analysis of large sums of legal data (hundreds of thousands of cases), and traditional/geographical representations of legal data.",
+                "links": [
+                    {
+                        "href": "../_assets/Ranking_of_Legal_Cases_Michael_Dreiling.pdf",
+                        "text": "Ranking of Legal Cases (a paper on two novel approaches)"
+                    }
+                ]
+            },
+            {
+                "company": "Fort Hays State University",
+                "start_date": "Summer 2007",
+                "end_date": "December 2007",
+                "location": "Hays, KS",
+                "description": "Fort Hays State University is the largest university in western Kansas, located in my hometown. As a student engineer, I created fully immersive flash-based websites (the original single page apps) for the 2007 and 2008 Encore Series; created a complete e-commerce store for the athletics department; and maintained a large majority of the university's public facing website.",
+                "links": []
+            }
+        ]
+    },
+    "contact": {
+        "heading": "I look forward to hearing from you!",
+        "body": "Please reach out via email or LinkedIn. I am generally quick to respond, but in certain cases may take a few days (we all, at times, have those extra busy points in our lives).",
+        "links": [
+            {
+                "icon": '<svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>',
+                "href": "mailto:madreiling@gmail.com",
+                "text": "madreiling@gmail.com"
+            },
+            {
+                "icon": '<svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>',
+                "href": "https://www.linkedin.com/in/madreiling",
+                "text": "https://www.linkedin.com/in/madreiling"
+            },
+            {
+                "icon": '<svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>',
+                "href": "https://github.com/madreiling",
+                "text": "https://github.com/madreiling"
+            },
+        ]
+    },
+}

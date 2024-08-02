@@ -1,0 +1,53 @@
+<header-controller>
+    <div class="mb-28">
+        <div data-target="header-controller.container" class="fixed top-0 left-0 w-full h-24 transition-all border-slate-800 duration-500 z-10 {% if page_url == "index.html" %}invisible{% endif %}">
+            <div class="container mx-auto max-w-screen-xl flex flex-row gap-10 items-center h-full px-4 md:px-10">
+                <a data-target="header-controller.navHomeLink" href="/">
+                    {{ home.title }}
+                </a>
+                <div class="ms-auto flex flex-row gap-20">
+                    <a data-target="header-controller.navBioLink" data-targets="header-controller.menuLinks" href="/bio.html" class="hidden md:block {% if page_url == "bio.html" %}text-io-highlight{% endif %}">
+                        Bio
+                    </a>
+                    <a data-target="header-controller.navResumeLink" data-targets="header-controller.menuLinks" href="/resume.html" class="hidden md:block {% if page_url == "resume.html" %}text-io-highlight{% endif %}">
+                        Résumé
+                    </a>
+                    <a data-target="header-controller.navContactLink" data-targets="header-controller.menuLinks" href="/contact.html" class="hidden md:block {% if page_url == "contact.html" %}text-io-highlight{% endif %}">
+                        Contact
+                    </a>
+                    <button data-action="click:header-controller#toggleDrawer" data-target="header-controller.mobileMenuBtn" class="block md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div data-target="header-controller.mobileDrawer" class="fixed top-0 left-0 z-20 backdrop-blur-md bg-io-background bg-opacity-90 w-full h-screen overflow-y-hidden transition-all -translate-x-full" tabindex="-1">
+            <div data-target="header-controller.mobileDrawerHeader" class="container mx-auto max-w-screen-xl flex flex-row items-center h-24 px-4 md:px-10 transition-all">
+                <div class="ms-auto pe-1 pt-1">
+                    <button data-action="click:header-controller#closeDrawer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col justify-start items-center gap-5 h-full">
+                <a class="pt-16 pb-16" href="/">
+                    {{ home.title }}
+                </a>
+                <a data-targets="header-controller.menuLinks" href="/bio.html" class="{% if page_url == "bio.html" %}text-io-highlight{% endif %}">
+                    Bio
+                </a>
+                <a data-targets="header-controller.menuLinks" href="/resume.html" class="{% if page_url == "resume.html" %}text-io-highlight{% endif %}">
+                    Résumé
+                </a>
+                <a data-targets="header-controller.menuLinks" href="/contact.html" class="{% if page_url == "contact.html" %}text-io-highlight{% endif %}">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </div>
+</header-controller>

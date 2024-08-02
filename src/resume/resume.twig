@@ -1,0 +1,96 @@
+{% extends './../_shared/layout.twig' %}
+
+{% set page_title = 'Résumé' %}
+
+{% block main %}
+
+<resume-controller>
+    <div class="container mx-auto max-w-screen-xl px-4">
+        {% if resume.pdf %}
+        <div class="flex flex-row justify-center p-5 pt-0" data-targets="resume-controller.animatedElements">
+            <a target="_blank" rel="noopener noreferrer" href="{{resume.pdf}}" class="flex flex-row gap-2 items-center">
+                <svg class="inline-block size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                <span>PDF Version</span>
+            </a>
+        </div>
+        {% endif %}
+        <div class="grid grid-cols-12 gap-2 md:gap-8 mb-6">
+            <div data-targets="resume-controller.animatedElements" class="self-start h-full col-span-12 md:col-span-3 text-start md:text-end">
+                <p class="sticky top-20"><strong>Skills</strong></p>
+            </div>
+            <div class="col-span-12 md:col-span-8 lg:col-span-7">
+                <p data-targets="resume-controller.animatedElements" class="text-justify mb-3">
+                    {{resume.skills.intro}}
+                </p>
+                <div data-targets="resume-controller.animatedElements" class="grid grid-cols-12 gap-2 md:gap-8 text-sm mb-3">
+                    <div class="col-span-12 md:col-span-4 pb-0">
+                        <strong>Programming Languages</strong>
+                        <ul class="mb-0 pb-0">
+                            {% for language in resume.skills.programming_languages %}
+                                <li>{{language}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-span-12 md:col-span-8 pb-0">
+                        <strong>Frameworks and Technologies</strong>
+                        {% for framework in resume.skills.frameworks %}
+                            <div class="flex flex-row gap-1 align-start">
+                                <div class="text-nowrap"><span class="text-normal">{{framework.category}}</span></div> 
+                                <div class="">–&nbsp;</div>
+                                <div class="">{{framework.text}}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <p data-targets="resume-controller.animatedElements" class="text-sm text-justify">
+                    {{resume.skills.outro}}
+                </p>
+            </div>
+        </div>
+        <div class="grid grid-cols-12 gap-2 md:gap-8 mb-6">
+            <div data-targets="resume-controller.animatedElements" class="self-start h-full col-span-12 md:col-span-3 text-start md:text-end">
+                <p class="sticky top-20"><strong>Work Experience</strong></p>
+            </div>
+            <div class="col-span-12 md:col-span-8 lg:col-span-7 flex flex-col gap-5">
+                {% for work in resume.experience %}
+                    <div>
+                        <p data-targets="resume-controller.animatedElements" class="mb-1">
+                            <strong>{{work.company}}</strong> – {{work.start_date}} to {{work.end_date}}<br />
+                            <span class="italic">{{work.location}}</span>
+                        </p>
+                        <p data-targets="resume-controller.animatedElements" class="text-sm text-justify">
+                            {{work.description}}
+                            {% if work.links|length > 0 %}<br />{% endif %}
+                            {% for link in work.links %}
+                            – <a target="_blank" rel="noopener noreferrer" href="{{link.href}}">{{link.text}}</a><br />
+                            {% endfor %}
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="grid grid-cols-12 gap-2 md:gap-8 mb-6">
+            <div data-targets="resume-controller.animatedElements" class="self-start h-full col-span-12 md:col-span-3 text-start md:text-end">
+                <p class="sticky top-20"><strong>Education</strong></p>
+            </div>
+            <div class="col-span-12 md:col-span-8 lg:col-span-7">
+                {% for education in resume.education %}
+                <div>
+                    <p data-targets="resume-controller.animatedElements" class="mb-1"><strong>{{education.degree}}, {{education.school}}</strong> – {{education.start_year}}-{{education.end_year}}</p>
+                    <p data-targets="resume-controller.animatedElements" class="text-sm text-justify">
+                        {{education.description}}
+                        {% if education.links|length > 0 %}<br />{% endif %}
+                        {% for link in education.links %}
+                        – <a target="_blank" rel="noopener noreferrer" href="{{link.href}}">{{link.text}}</a><br />
+                        {% endfor %}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</resume-controller>
+
+{% endblock %}

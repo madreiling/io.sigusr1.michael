@@ -1,0 +1,21 @@
+node_modules
+dist
+AppPackages
+BundleArtifacts
+bin
+obj
+
+.DS_Store
+*.log
+.vs
+.idea
+.vscode
+.cache
+.eslintcache
+package-lock.json
+
+// Paid GSAP plugin
+src/_shared/_components/_SplitTextGsap.js
+
+// Not sharing for now
+src/_shared/background

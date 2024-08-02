@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="google-site-verification" content="{{google_site_verification_code}}">
+    <meta name="theme-color" content="#0c0f18">
+    <title>{{ application_name }}{% if page_title %} | {{ page_title }}{% endif %}</title>
+    <meta name="description" content="{{ application_description }}">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Oswald:300,400" as="style">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+    <link href="/src/_assets/favicon.png" rel="shortcut icon">
+    <meta name="turbo-cache-control" content="no-cache">
+    <meta name="turbo-prefetch" content="false">
+    <meta name="turbo-refresh-method" content="morph">
+    <meta name="turbo-refresh-scroll" content="preserve">
+
+    <meta property="og:title" content="{{application_name}}{% if page_title %} | {{ page_title }}{% endif %}">
+    <meta property="og:url" content="https://michael.sigurs1.io/{{page_url}}">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{application_description}}">
+    <meta property="og:locale" content="en_US">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ga_key}}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{google_analytics_key}}');
+    </script>
+
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body class="h-dvh relative bg-white text-black dark:bg-io-background dark:text-white font-light overflow-y-scroll dark">
+    <div class="z-0 fixed top-0 left-0 w-full h-full pointer-events-none select-none" id="background-container" data-turbo-permanent>
+      {% include "./background/background.twig" %}
+    </div>
+
+    <div class="flex flex-col h-full">
+      <div class="flex-none" id="header" data-turbo-permanent>
+        {% include "./header/header.twig" %}
+      </div>
+
+      <div class="grow" id="main">
+        {% block main %}
+        {% endblock %}
+      </div>
+
+      <div class="flex-none" id="footer" data-turbo-permanent>
+        {% include "./footer/footer.twig" %}
+      </div>
+
+      <script data-turbo-eval="false">
+        // For page refreshes and cached loads
+        document.querySelector("body").style.opacity = `0`;
+      </script>
+    </div>
+  </body>
+</html>
