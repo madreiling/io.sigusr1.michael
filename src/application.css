@@ -8,6 +8,10 @@
 }
 
 @layer base {
+    html {
+        font-size: 1.075em;
+    }
+
     a, button {
         @apply transition ease-in-out text-io-primary hover:text-io-highlight duration-500;
     }
